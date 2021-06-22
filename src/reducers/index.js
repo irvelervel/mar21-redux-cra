@@ -15,6 +15,11 @@ export const mainReducer = (state = initialState, action) => {
         count: state.count + 1,
         // usually every case covers a single atomic operation
       }
+    case 'DECREMENT':
+      return {
+        ...state,
+        count: state.count - 1,
+      }
     default:
       return state
   }
